@@ -1,0 +1,15 @@
+<!doctype html>
+<html>
+<head><meta charset="utf-8"><title>EV Solar Charge</title></head>
+<body>
+<p>Returning to the EV Solar Charge app on this Mac…</p>
+<script>
+const q = new URLSearchParams(location.search);
+if (q.has("code") && q.has("state")) {
+  location.href = "http://127.0.0.1:8080/tesla/callback?" + q.toString();
+} else {
+  document.body.textContent = "Tesla sign-in details were not received. Return to the app and try again.";
+}
+</script>
+</body>
+</html>
